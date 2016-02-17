@@ -1,3 +1,4 @@
+#coding: utf-8
 from django.contrib import admin
 from django.conf import settings
 from django.core.urlresolvers import reverse
@@ -6,7 +7,7 @@ from django_facebook import models
 from django_facebook import settings as facebook_settings
 from django_facebook.utils import get_profile
 
-
+# aaaaaaaaaaaaaaaaaaaa
 class FacebookUserAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'name', 'facebook_id',)
     search_fields = ('name',)
