@@ -8,10 +8,15 @@ from django_facebook import settings as facebook_settings
 from django_facebook.utils import get_profile
 
 # aaaaaaaaaaaaaaaaaaaa
+#Creating a new branch is quick.
 class FacebookUserAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'name', 'facebook_id',)
     search_fields = ('name',)
 
+def retry_open_graph_share(modeladmin, request, queryset):
+    for open_graph_share in queryset:
+        open_graph_share.retry()
+        messages.info(request, 'resent share %s' % open_graph_share.id)
 
 class FacebookLikeAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'name', 'category', 'facebook_id',)
