@@ -9,7 +9,7 @@ from django_facebook.utils import get_profile
 
 # aaaaaaaaaaaaaaaaaaaa
 #Creating a new branch is quick.
-
+win8win8win8win8win8win8win8
 class FacebookUserAdminaaaabbbb(admin.ModelAdmin):
     list_display = ('user_id', 'name', 'facebook_id',)
     search_fields = ('name',)
